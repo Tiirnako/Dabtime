@@ -1,4 +1,4 @@
-const { app, BrowserWindow, globalShortcut, ipcMain, Tray, Menu } = require('electron');
+const { win, app, BrowserWindow, globalShortcut, ipcMain, Tray, Menu } = require('electron');
 const path = require('path');
 
 var isDev = process.env.APP_DEV ? (process.env.APP_DEV.trim() == "true") : false;
@@ -17,7 +17,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: './tray-icon.png',
+    icon: path.join(__dirname, './icon.ico'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },

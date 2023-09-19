@@ -1,14 +1,18 @@
 {
   "name": "Dabtime",
   "version": "1.0.1",
-  "description": "",
+  "description": "Jingle jangle",
   "main": "index.js",
+  "icon": "./icon.ico",
   "build": {
     "appId": "dabtime",
     "files": [
       "!dist/**/*",
       "!node_modules"
     ],
+    "win": {
+      "icon": "./icon.ico"
+      },
     "includeSubNodeModules": true
   },
   "scripts": {
