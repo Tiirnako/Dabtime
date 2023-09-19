@@ -17,7 +17,7 @@ function createWindow() {
 
   // Register a global shortcut (Play audio on "Ctrl+Alt+A")
   app.whenReady().then(() => {
-    globalShortcut.register('ctrl+D', () => {
+    globalShortcut.register('ctrl+shift+d', () => {
       mainWindow.webContents.executeJavaScript(`
         audio.play();
       `);
@@ -70,7 +70,6 @@ ipcMain.on('play-audio', () => {
   // For example, play an audio file
   // Replace 'my-audio.mp3' with your audio file path
   mainWindow.webContents.executeJavaScript(`
-    const audio = new Audio('my-audio.mp3');
     audio.play();
   `);
 });
