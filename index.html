@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Electron Audio App</title>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <h1>Audio Player</h1>
+    <h1>It's Dabtime!</h1>
+    <p>Click the button to play the jingle, otherwise</p>
+    <p>you can minimize this program and use the 'CTRL+SHIFT+D' to play the jingle.</p>
     <button id="play-button">Play Audio</button>
-
-    <p>You can minimize this program and use the 'CTRL+SHIFT+D' to activate the jingle.</p>
-    <script>
-        let audio;
-
-        if (!audio) {
-        audio = new Audio('my-audio.mp3');
-        } else if( audio === new Audio('my-audio.mp3') ) {
-            
-            document.getElementById('play-button').addEventListener('click', () => {
-                window.ipcRenderer.send('play-audio');
-            });
-        }
-
-    </script>
+  
+    <script src="./dab.js"></script>
 </body>
 </html>
