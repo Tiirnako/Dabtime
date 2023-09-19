@@ -3,6 +3,14 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
+  "build": {
+    "appId": "dabtime",
+    "files": [
+      "!dist/**/*",
+      "!node_modules"
+    ],
+    "includeSubNodeModules": true
+  },
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,9 +23,11 @@
   },
   "dependencies": {
     "electron-localshortcut": "^3.2.1",
+    "electron-packager": "^17.1.2",
     "electron-reload": "^2.0.0-alpha.1",
     "node-aplay": "^1.0.3",
     "play-sound": "^1.1.6",
     "sound-play": "^1.1.0"
   }
+  
 }
