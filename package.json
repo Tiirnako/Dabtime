@@ -1,0 +1,22 @@
+{
+  "name": "Dabtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Tiirnako",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^26.2.1"
+  },
+  "dependencies": {
+    "electron-localshortcut": "^3.2.1",
+    "node-aplay": "^1.0.3",
+    "play-sound": "^1.1.6",
+    "sound-play": "^1.1.0"
+  }
+}
