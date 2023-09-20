@@ -17,7 +17,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: path.join(__dirname, './icon.ico'),
+    icon: path.join(__dirname, 'src/icon.ico'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -25,17 +25,15 @@ function createWindow() {
 
   mainWindow.loadFile('index.html');
 
-  // Register a global shortcut (Play audio on "Ctrl+Alt+A")
+  // Register a global shortcut (Play audio on "Ctrl+Shift+D")
   app.whenReady().then(() => {
     globalShortcut.register('ctrl+shift+d', () => {
-      mainWindow.webContents.executeJavaScript(`
-        audio.play();
-      `);
+      mainWindow.webContents.executeJavaScript(`audio.play();`);
     });
   });
 
   // Create a system tray icon
-  tray = new Tray(path.join(__dirname, 'tray-icon.png'));
+  tray = new Tray(path.join(__dirname, 'src/tray-icon.png'));
 
   // Define a context menu for the tray icon
   const contextMenu = Menu.buildFromTemplate([
