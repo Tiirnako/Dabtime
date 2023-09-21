@@ -4,10 +4,37 @@
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+    <div id="timer">
+        <h1>Dab Timer</h1>
+        <div id="clockdiv">
+                <div>
+                    <div class="smalltext">Hours</div>
+                    <span class="hours">00</span>
+                </div>
+                <div class="colon">:</div>
+                <div>
+                    <div class="smalltext">Minutes</div>
+                    <span class="minutes">00</span>
+                </div>
+                <div class="colon">:</div>
+                <div>
+                    <div class="smalltext">Seconds</div>
+                    <span class="seconds">00</span>
+                </div>
+        </div>
+        <div id="timerOpt">
+            <button class="timerBtn" id="timer-45-btn">0:45</button>
+            <button class="timerBtn" id="timer-60-btn">1:00</button>
+            <button class="timerBtn" id="timer-115-btn">1:15</button>
+        </div>
+    </div>
+    
     <h1>It's Dabtime!</h1>
     <p>Click the button to play the jingle, otherwise you can minimize this program and use the 'CTRL+SHIFT+D' to play the jingle.</p><p>Right-click > Quit in the system tray to close the program. You can also close it if the program is open in a window.</p>
     <button id="play-button">Dab Time!</button>
   
+    
+
     <script src="./dab.js"></script>
 </body>
 </html>
