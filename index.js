@@ -1,9 +1,9 @@
 const { app, BrowserWindow, globalShortcut, ipcMain, Tray, Menu } = require('electron');
 const path = require('path');
 
-    require('electron-reload')(__dirname, {
-      electron: require(`${__dirname}/node_modules/electron`)
-    });
+    // require('electron-reload')(__dirname, {
+    //   electron: require(`${__dirname}/node_modules/electron`)
+    // });
 
 
 
