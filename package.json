@@ -1,6 +1,6 @@
 {
-  "name": "Dabtime",
-  "version": "1.0.3",
+  "name": "dabtime",
+  "version": "1.1.0",
   "description": "Jingle jangle",
   "main": "index.js",
   "icon": "./src/icon.ico",
