@@ -1,5 +1,5 @@
-let audio = new Audio('dabtime.mp3');
-let timer = new Audio('dabTimer.mp3');
+let audio = new Audio('./src/dabtime.mp3');
+let timer = new Audio('./src/dabTimer.mp3');
 
 document.getElementById('play-button').addEventListener('click', () => {
   window.ipcRenderer.send('play-audio');
