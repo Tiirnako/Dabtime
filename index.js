@@ -1,13 +1,10 @@
-const { win, app, BrowserWindow, globalShortcut, ipcMain, Tray, Menu } = require('electron');
+const { app, BrowserWindow, globalShortcut, ipcMain, Tray, Menu } = require('electron');
 const path = require('path');
 
-var isDev = process.env.APP_DEV ? (process.env.APP_DEV.trim() == "true") : false;
-
-if (isDev) {
     require('electron-reload')(__dirname, {
       electron: require(`${__dirname}/node_modules/electron`)
     });
-}
+
 
 
 let mainWindow;
@@ -74,11 +71,14 @@ function createWindow() {
 
 // Listen for messages from the renderer process to play audio
 ipcMain.on('play-audio', () => {
-  // Implement audio playback logic here
-  // For example, play an audio file
-  // Replace 'my-audio.mp3' with your audio file path
   mainWindow.webContents.executeJavaScript(`
     audio.play();
+  `);
+});
+
+ipcMain.on('play-timer', () => {
+  mainWindow.webContents.executeJavaScript(`
+    timer.play();
   `);
 });
 

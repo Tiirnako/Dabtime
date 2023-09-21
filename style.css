@@ -1,10 +1,18 @@
+@import url('https://fonts.cdnfonts.com/css/calculator');
+
 * {
+    --margin-top: 25px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(55, 59, 55);
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h1 {
+    padding-top: 4rem ;
 }
 
 p {
@@ -33,4 +41,59 @@ button:active {
     border-color: white;
     background-color: rgb(71, 150, 71);
     scale: 1.05
+}
+
+#timer {
+    margin-top: var(--margin-top);
+}
+
+.minutes {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .minutes::before, 
+.minutes::after  {
+    content: ":";
+} */
+
+#timeText {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+}
+
+span {
+    font-family: 'Calculator', sans-serif;
+    font-size: 4rem;
+}
+
+#clockdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+#timerOpt {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    margin-top: var(--margin-top);
+    justify-content: space-evenly;
+}
+
+.smalltext {
+    display:flex;
+}
+
+.colon {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 3rem
+}
+
+.timerBtn {
+    font-family: 'Calculator', sans-serif;
+    font-size: 1.5rem
 }
